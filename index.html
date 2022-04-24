@@ -7,9 +7,329 @@
     <title>기업형 레이아웃</title>
     <link rel="stylesheet" href="./css/style.css">
     <script src="https://kit.fontawesome.com/b24d8c8339.js" crossorigin="anonymous"></script>
+    <script defer src="./anime.js"></script>
     <script defer src="./main.js"></script>
 </head>
 <body>
-    
+    <!-- header 영역 -->
+    <header id="header">
+        <div class="inner">
+            <h1><a href="./index.html">ICLUB</a></h1>
+
+            <nav>
+                <ul id="gnb">
+                    <li><a href="./department.html" data-content="Department">Department</a></li>
+                    <li><a href="#" data-content="Youtube">Youtube</a></li>
+                    <li><a href="./_community.html" data-content="Community">Community</a></li>
+                    <li><a href="#" data-content="Portfolio">Portfolio</a></li>
+                    <li><a href="#" data-content="Location">Location</a></li>
+                </ul>
+
+                <ul class="util">
+                    <li><a href="#">Notice</a></li>
+                    <li><a href="#">Contact</a></li>
+                    <li><a href="#">Login</a></li>
+                    <li><a href="#">Sitemap</a></li>
+                </ul>
+            </nav>
+
+
+        </div>
+    </header>
+
+    <!-- figure 영역 -->
+    <figure id="visual">
+        <img src="./assets/mainBg.png" alt="">
+        <div class="inner">
+            <h1>Invest in what<br/> comes <span>next</span></h1>
+            <p>
+                We are young venture club connecting founders with investors<br/> for the change of market and success of both.
+            </p>
+            <a href="#" class="btnJoin">Join the club</a>
+            <div class="pic">
+                <img src="./assets/phone.png" alt="invest app">
+            </div>
+        </div>
+    </figure>
+
+    <!-- strategy 영역 -->
+    <section id="strategy">
+        <div class="inner">
+            <h1>INVESTMENT STRATEGY</h1>
+            <div class="wrap">
+                <article>
+                    <img src="./assets/enterprise.png" alt="">
+                    <h2>look for startups</h2>
+                    <p>We look for startups with scalable business models built on strong fundamentals (unit economics and defensibility) and proven early revenue traction.</p>
+                </article>
+                <article>
+                    <img src="./assets/investment.png" alt="">
+                    <h2>joint investment</h2>
+                    <p>We invest in Seed and Series A startups with a typical ticket ranging between $100k and $500k and capacity for follow-on investments.</p>
+                </article>
+                <article>
+                    <img src="./assets/unity.png" alt="">
+                    <h2>diversity</h2>
+                    <p>This way, most recently, we’ve focused on Mobility, Digital Health, FinTech, PropTech, and AI-enabled Enterprise Software, but we keep an eye across sectors.</p>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- explanation 영역 -->
+    <section id="explanation">
+        <div class="inner">
+            <article>
+                <img src="./assets/founding partner.png" alt="founding partner">
+                <strong>Viktoriya Tigipko</strong>
+                <span>ICLUB Global President, TA Ventures Founding Partner</span>
+            </article>
+            <article>
+                <h1>Becoming an ICLUB investor</h1>
+                <ol>
+                    <li>1.Discuss your investment strategy with your eegion's ICLUB director.</li>
+                    <li>2.Complete onboarding and KYC.</li>
+                    <li>3.Receive investment opportunity one&#45;pager, before our monthly ICLUB event.</li>
+                    <li>4.Attend ICLUB event and deep&#45;dive call.</li>
+                    <li>5.Co&#45;invest with TA Ventures.</li>
+                    <li>6.Exit from the investment together with TA Ventrues</li>
+                </ol>
+            </article>
+        </div>
+    </section>
+
+    <!-- invest 영역 -->
+    <section id="invest">
+        <div class="inner">
+            <h1>We invest in</h1>
+            <div class="wrap">
+                <article>
+                    <i class="fas fa-medkit"></i> 
+                    <h2>Digital Health</h2>
+                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Magni cumque adipisci consequuntur beatae, nisi saepe!</p>            
+                </article>
+                <article>
+                    <i class="fas fa-train"></i> 
+                    <h2>Mobility</h2>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem, earum alias cum distinctio debitis maxime.</p>            
+                </article>
+                <article>
+                    <i class="fa fa-mobile-phone"></i> 
+                    <h2>Enterprise Software</h2>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus exercitationem velit voluptatibus necessitatibus reiciendis aliquam?</p>            
+                </article>
+                <article>
+                    <i class="fa fa-bank"></i> 
+                    <h2>FinTech</h2>
+                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ullam placeat assumenda eius quisquam, commodi fuga?</p>            
+                </article>
+                <article>
+                    <i class="fas fa-globe"></i> 
+                    <h2>Travel</h2>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo quidem laborum dolorem sint! Mollitia, provident!</p>            
+                </article>
+                <article>
+                    <i class="fas fa-shopping-bag"></i> 
+                    <h2>Consumer Goods</h2>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint, tempora eos rerum asperiores facere porro.</p>            
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- insight 영역 -->
+    <section id="insight">
+        <div class="inner">
+            <h1>Insight</h1>
+            <p>Our members recieve news, analysis, trends and reports on our portfolio<br/> companies&#39; performance shared at our monthly events and via a newsletter</p>
+        
+            <article id="phone">
+                <ul>
+                    <li>
+                        <img src="./assets/insight1.png" alt="insight1">
+                    </li>
+                    <li>
+                        <img src="./assets/insight2.png" alt="insight2">
+                    </li>
+                    <li>
+                        <img src="./assets/insight3.png" alt="insight3">
+                    </li>
+                    <li>
+                        <img src="./assets/insight4.png" alt="insight4">
+                    </li>
+                    <li>
+                        <img src="./assets/insight5.png" alt="insight5">
+                    </li>
+                    <li>
+                        <img src="./assets/insight6.png" alt="insight6">
+                    </li>
+                    <li>
+                        <img src="./assets/insight7.png" alt="insight7">
+                    </li>
+                    <li>
+                        <img src="./assets/insight8.png" alt="insight8">
+                    </li>
+                </ul>
+
+                <a href="#" class="prev">
+                    <i class="fas fa-arrow-left"></i>
+                </a>
+                <a href="#" class="next">
+                    <i class="fas fa-arrow-right"></i>
+                </a>
+            </article>
+        </div>
+            
+        
+    </section>
+
+    <!-- app 영역 -->
+    <section class="app">
+        <div class="inner">
+            <div>
+                <h2>Download ICLUB App Today!</h2>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nobis vel, ut quam sit et velit ab quidem odio maiores pariatur?</p>
+                <a href="#">
+                    <img src="./assets/appstore.png" alt="App Store">
+                </a>
+                <a href="#">
+                    <img src="./assets/playstore.png" alt="">
+                </a>
+            </div>
+            <div>
+                <img src="./assets/phone.png" alt="">
+            </div>
+        </div>
+    </section>
+
+    <!-- news 영역 -->
+    <section class="news">
+        <div class="inner">
+            <h1>Latest News</h1>
+            <p>
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Libero eligendi fuga saepe!
+            </p>
+            <div class="wrap">
+                <article>
+                    <img src="./assets/news1.png" alt="news1">
+                    <div>
+                        <span>
+                            <i class="fas fa-user"></i>
+                            BY:TechCrunch
+                        </span>
+                        <span>
+                            <i class="fas fa-calendar"></i>
+                            NOV 04, 2021
+                        </span>
+                    </div>
+                    <h3>
+                        New investment in proptech startup June Homes
+                    </h3>
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Et, inventore voluptatibus? Eveniet?
+                    </p>
+                    <a href="#">
+                        READ MORE
+                    </a>
+                </article>
+                <article>
+                    <img src="./assets/news2.webp" alt="news2">
+                    <div>
+                        <span>
+                            <i class="fas fa-user"></i>
+                            BY:TechCrunch
+                        </span>
+                        <span>
+                            <i class="fas fa-calendar"></i>
+                            NOV 04, 2021
+                        </span>
+                    </div>
+                    <h3>
+                        Portfolio delivery company Jiffy raised $28M in Series A
+                    </h3>
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Et, inventore voluptatibus? Eveniet?
+                    </p>
+                    <a href="#">
+                        READ MORE
+                    </a>
+                </article>
+                <article>
+                    <img src="./assets/news3.webp" alt="news3">
+                    <div>
+                        <span>
+                            <i class="fas fa-user"></i>
+                            BY:AIN
+                        </span>
+                        <span>
+                            <i class="fas fa-calendar"></i>
+                            NOV 04, 2021
+                        </span>
+                    </div>
+                    <h3>
+                        Portfolio delivery company Jiffy raised $28M in Series A
+                    </h3>
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Et, inventore voluptatibus? Eveniet?
+                    </p>
+                    <a href="#">
+                        READ MORE
+                    </a>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- subscription 영역 -->
+    <section class="subscription">
+        <div class="inner">
+            <h1>Ask us anything</h1>
+            <p>We will keeep your personal information private and safe</p>
+            <div class="input-group">
+                <form action="#" method="GET">
+                    <input type="email" placeholder="Enter Your Email Address...">
+                    <button type="submit">Subscribe</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- footer 영역 -->
+    <footer id="footer">
+        <div class="inner">
+            <h1>ICLUB</h1>
+            <div class="contact">
+                <div>
+                    <h3>HEAD OFFICE</h3>
+                    <address>32&#47;2 Moskovska St., 01010,Kyjv,Ukraine</address>
+                </div>
+                <div>
+                    <h3>EMAIL FOR PRESS</h3>
+                    <a href="mailto:press@iclub.vc">press@iclub.vc</a>
+                </div>
+            </div>
+            <ul>
+                <li>
+                    <a href="#">
+                        <i class="fab fa-linkedin"></i>
+                        Linkedin
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <i class="fab fa-facebook"></i>
+                        Facebook
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <i class="fab fa-instagram"></i>
+                        Instagram
+                    </a>
+                </li>
+            </ul>
+        </div>
+
+    </footer>
 </body>
 </html>
