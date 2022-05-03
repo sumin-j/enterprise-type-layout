@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>기업형 레이아웃</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=8f389a4aa08aabbe4b7e5c89c3a0f984"></script>
+    <script src="https://kit.fontawesome.com/b24d8c8339.js" crossorigin="anonymous"></script>
+    <script defer src="./location.js"></script>
+</head>
+<body>
+    <!-- header 영역 -->
+    <header id="header">
+        <div class="inner">
+            <h1><a href="index.html">ICLUB</a></h1>
+
+            <nav>
+                <ul id="gnb">
+                    <li><a href="department.html" data-content="Department">Department</a></li>
+                    <li><a href="youtube.html" data-content="Youtube">Youtube</a></li>
+                    <li><a href="community.html" data-content="Community">Community</a></li>
+                    <li><a href="portfolio.html" data-content="Portfolio">Portfolio</a></li>
+                    <li><a href="location.html" data-content="Location">Location</a></li>
+                </ul>
+
+                <ul class="util">
+                    <li><a href="#">Notice</a></li>
+                    <li><a href="#">Contact</a></li>
+                    <li><a href="join.html">Login</a></li>
+                    <li><a href="#">Sitemap</a></li>
+                </ul>
+            </nav>
+
+
+        </div>
+    </header>
+    <!-- content 영역 -->
+    <section id="location">
+        <div class="inner">
+            <h1>Location</h1>
+            <div class="row">
+                <span>ICLUB team</span>
+                <p>
+                    Join the club at our next event. Please come to our company at any time.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <section class="inner">
+        <div id="map"></div>
+
+        <ul class="traffic">
+        <li><a href="#">View traffic information</a></li>
+        <li  class="on"><a href="#">Turn off traffic information</a></li>
+         </ul>
+    
+        <ul class="branch">
+        <li class="on" data-index="0"><a href="#">A company</a></li>
+        <li data-index="1"><a href="#">B company</a></li>
+        <li data-index="2"><a href="#">C company</a></li>
+        </ul>
+    </section>
+
+   
+
+    <!-- footer 영역 -->
+    <footer id="footer">
+    <div class="inner">
+        <h1>ICLUB</h1>
+        <div class="contact">
+            <div>
+                <h3>HEAD OFFICE</h3>
+                <address>32&#47;2 Moskovska St., 01010,Kyjv,Ukraine</address>
+            </div>
+            <div>
+                <h3>EMAIL FOR PRESS</h3>
+                <a href="mailto:press@iclub.vc">press@iclub.vc</a>
+            </div>
+        </div>
+        <ul>
+            <li>
+                <a href="#">
+                    <i class="fab fa-linkedin"></i>
+                    Linkedin
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <i class="fab fa-facebook"></i>
+                    Facebook
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <i class="fab fa-instagram"></i>
+                    Instagram
+                </a>
+            </li>
+        </ul>
+    </div> 
+    </footer>
+
+</body>
+</html>
+

@@ -1,0 +1,122 @@
+#join {
+    width: 100%;
+    padding: 120px 0;
+    position: relative;
+    overflow: hidden;
+    .inner {
+        width: 1180px;
+        margin: 0 auto;
+        h1 {
+            font-weight: 700;
+            font-size: 48px;
+            color: $dark;
+            margin-bottom: 80px;
+        }
+        .row {
+            position: relative;
+            &::after {
+                @include clear();
+            }
+            span{
+                @include text-style-16();                
+                display: block;
+                float: left;
+                width: 580px;
+                bottom: 0;
+                padding-top: 80px;
+            }
+            p {
+                @include text-style-24();
+                float: left;
+                width: 580px;
+                font-weight: 700;
+            }
+        }
+    }   
+}
+
+
+form {
+    width: 100%;
+    position: relative;
+    margin-bottom: 180px;
+    fieldset {
+        width: 1180px;
+        margin: 0 auto;
+    }
+    .terms {
+        padding: 0 330px;
+        position: relative;
+        h2 {
+            @include text-style-24();
+            color: $dark;
+            text-align: center;
+            margin-bottom: 20px;
+            &::after {
+                content: '';
+                display: block;
+                position: absolute;
+                left: 41.5%;
+                top: 20px;
+                width: 200px;
+                height: 20px;
+                background: $blue;
+                opacity: 0.5;
+            }
+        }
+        textarea {
+            padding: 0px 30px;
+            resize: none;
+            margin-bottom: 20px;
+        }
+        .agree {
+            padding: 0px 30px;
+            color: $primary;
+            margin-bottom: 50px;
+        }
+    }
+
+    .input-group {
+        padding: 0 330px;
+        table {
+            width: 100%;
+            tr {
+                height: 80px;
+                th {
+                    text-align: center;
+                    padding: 20px 30px;
+                }
+                td {
+                    padding: 20px 30px;
+                    
+                    input[type=text],input[type=email],
+                    input[type=tel]{
+                        width: 80%;
+                        height: 40px;
+                        background: $bgColor;
+                        padding-left: 20px;
+                    }
+                    select#location {
+                        padding: 20px 0;
+                    }
+                    p {
+                        @include text-style-16();
+                        color: $red;
+                        padding-top: 10px;
+                    }
+                }
+            }  
+        }
+        button[type=submit] {
+            width: 200px;
+            height: 80px;
+            background: $bgColor;
+            border: 1px solid $dark;
+            border-radius: 40px;
+            @include text-style-24();
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+    }
+}

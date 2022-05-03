@@ -4,3 +4,1479 @@
 @import "color.scss";
 @import "typography.scss";
 @import "mixin.scss";
+@import "department.scss";
+@import "community.scss";
+@import "join.scss";
+@import "youtube.scss";
+@import "location.scss";
+@import "portfolio.scss";
+
+
+$tablet: 1179px;
+$mobile: 539px;
+
+
+/*--------header 영역--------*/
+#header {
+    width: 100%;
+    .inner {
+        width: 1180px;
+        height: 120px;
+        margin: 0 auto;
+        position: relative;
+        h1 {
+            position: absolute;
+            top: 35px;
+            left: 0;
+            &::after {
+                content: '';
+                display: block;
+                width: 6px;
+                height: 6px;
+                background: $blue;
+                border-radius: 50%;
+                position: absolute;
+                left: 120px;
+                top: 10px;
+            }
+            a {
+                font-weight: 700;
+                font-size: 38px;
+                color: $dark;
+            }
+        }
+        
+       
+            #gnb {
+                position: absolute;
+                left: 300px;
+                top: 55px;
+                &::after{
+                    @include clear();
+                }
+                li {
+                    float: left;
+                    a {
+                        display: inline-block;
+                        position: relative;
+                        // padding: 8px 6px;
+                        margin-left: 35px;
+                        @include text-style-18();
+                        font-weight: 700;
+                        text-align: center;
+                        &::before {
+                            content:attr(data-content);
+                            display: block;
+                            position: absolute;
+                            width: 0;
+                            overflow: hidden;
+                            color: $blue-dark;
+                            transition: width 0.5s linear;
+                        }
+                        &:hover {
+                            border-bottom: 2px solid $blue-dark;
+                        }
+                        &:hover::before {
+                                width: 100%;  
+                        }
+                    }
+                }
+        }
+        .util {
+            position: absolute;
+            right: 0;
+            bottom: 50px;
+            ::after {
+                @include clear();
+            }
+            li {
+                float: left;
+                margin-left: 12px;
+                a {
+                    @include text-style-12();
+                    color: $secondary;
+                    padding: 8px 6px;
+                }
+            }
+        }
+
+        // .btnCall {
+        //     position: absolute;
+        //     right: 100px;
+        //     top: 50%;
+        //     transform: translateY(-50%);
+        //     width: 20px;
+        //     height: 20px;
+        //     display: none;
+        //     &::before {
+        //         content: '';
+        //         display: block;
+        //         width: 100%;
+        //         height: 2px;
+        //         background: $black;
+        //         position: absolute;
+        //         top: 0;
+        //         left: 0;
+        //         transition: all 0.5s;
+        //     }
+        //     &::after{
+        //         content: '';
+        //         display: block;
+        //         width: 100%;
+        //         height: 2px;
+        //         background: $black;
+        //         position: absolute;
+        //         bottom: 0;
+        //         left: 0;
+        //         transition: all 0.5s;
+        //     }
+        //     span {
+        //         display: block;
+        //         width: 100%;
+        //         height: 2px;
+        //         background: $black;
+        //         position: absolute;
+        //         top: 50%;
+        //         left: 0;
+        //         margin-top: -1px;
+        //         text-indent: -9999px;
+        //     }
+        //     &.on {
+        //         &::after {
+        //             bottom: 50%;
+        //             margin-bottom: -1px;
+        //             transform: rotate(-45deg);
+        //         }
+        //         &::before {
+        //             top: 50%;
+        //             margin-top: -1px;
+        //             transform: rotate(45deg);
+        //         }
+        //         span {
+        //             transform: translateX(100%);
+        //             opacity: 0;
+        //         }
+        //     }
+        // }
+        // .menuMo {
+        //     width: 270px;
+        //     height: 100vh;
+        //     background: $primary;
+        //     position: fixed;
+        //     top: 0;
+        //     left: -270px;
+        //     padding: 35px 30px;
+        //     z-index: 10;
+        //     transition: all 0.5s;
+        //     &.on {
+        //         left: 0;
+        //     }
+        //     h1 {
+        //         position: absolute;
+        //         left: 30%;
+        //         margin-bottom: 80px;
+        //         &::after {
+        //             display: none;
+        //         }
+
+        //         a {
+        //             display: block;
+        //             color: $blue-dark;
+        //             text-align: center;
+        //             padding: 20px 0;
+                    
+        //         }
+        //     }
+        //     #gnbMo {
+        //         height: auto;
+        //         position: absolute;
+        //         top: 20%;
+        //         left: 25%;
+        //         li {
+        //             a {
+        //                 display: block;
+        //                 width: 100%;
+        //                 padding: 20px 0;
+        //                 @include text-style-18();
+        //                 color:$white ;
+        //                 text-align: center;
+        //             }
+        //         }
+        //     }
+        // }
+    }
+}
+  
+/*--------figure 영역--------*/
+#visual {
+    width: 100%;
+    height: calc(100vh - 120px);
+    overflow: hidden;
+    position: relative;
+    img {
+        width: 100%;
+        margin: 0 auto;
+    }
+    .inner {
+        width: 1180px;
+        margin: 0 auto;
+        position: absolute;
+        top: 30%;
+        left: 20%;
+        transform: translateX(-1%);
+        &::after {
+            @include clear();
+        }
+       article {
+           &:nth-of-type(1) {
+               float: left;
+            h1 {
+                font-weight: 700;
+                font-size: 60px;
+                line-height: 1.2;
+                color: $dark;
+                margin-bottom: 26px;
+                span {
+                    font-style:italic ;
+                }
+            }
+            p {
+                @include text-style-18();
+                color: $primary;
+                margin-bottom: 50px;
+            }
+            .btnJoin {
+                display: block;
+                width: 200px;
+                height: 50px;
+                background: $green;
+                color: $white;
+                font-weight: 700;
+                @include text-style-16();
+                border-radius: 30px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                box-shadow: 0px 10px 16px 0px #13CE6659;
+                transition: all 0.5s;
+                &:hover{
+                    color: $black;
+                    transform: translateY(-3px);
+                }
+            }
+           }
+           &:nth-of-type(2) {
+               float: left;
+            .pic {
+                width: 400px;
+                height: 800px;
+                img {
+                    display: block;
+                    object-fit: cover;
+                    width: 100%;
+                    height: auto;
+                    position: absolute;
+                    right: -300px;
+                    top: -250px;
+                }
+            }
+           }
+       }
+       
+    }
+
+}
+/*--------strategy 영역--------*/
+#strategy {
+    width: 100%;
+    padding: 180px 0;
+    .inner {
+        width: 1180px;
+        margin: 0 auto;
+        position: relative;
+        h1 {
+            font-size: 32px;
+            font-weight: 700;
+            text-align: center;
+            color: $black;
+            margin-bottom: 80px;
+        }
+        .wrap {
+            width: 100%;
+            padding: 0;
+            &::after {
+                @include clear();
+            }
+            article {
+                float: left;
+                width: 380px;
+                height: 480px;
+                margin-right: 20px;
+                border-radius: 8px;
+                box-shadow: 2px 2px 10px rgba(149,199,214,0.5);
+                &:last-of-type{ 
+                    margin-right: 0;
+                }
+                img {
+                    display:block;
+                    width: 160px;
+                    height: 160px;
+                    padding-top:40px ;
+                    margin: 40px auto;
+                }
+                h2 {
+                    text-align: center;
+                    margin-bottom: 18px;
+                    color: $dark;
+                    font-weight: 700;
+                    @include text-style-24();
+                }
+                p {
+                    width: 300px;
+                    margin: 0 auto;
+                    text-align: center;
+                    color: $primary;
+                    @include text-style-16();
+                }
+            }
+        }
+    }
+}
+/*--------explanation 영역--------*/
+#explanation {
+    width: 100%;
+    height: 650px;
+    padding: 90px 0;
+    background:  $border;
+    .inner {
+        width: 1180px;
+        margin: 0 auto;
+        &::after {
+            @include clear();
+        }
+        article {
+            float: left;
+            width:580px ;
+            margin-right: 20px;
+            position: relative;
+            &:nth-of-type(1){
+                img {
+                    display: block;
+                    position: absolute;
+                    width: 100%;
+                    top: 60px;
+                    margin-top: 50px
+                }
+                strong {
+                    @include text-style-18();
+                    color: $primary;
+                }
+                span {
+                    display: block;
+                    @include text-style-16();
+                    margin-bottom: 30px;
+                }
+
+            }
+            &:last-of-type{
+                margin-right: 0;
+                h1 {
+                    font-weight: 700;
+                    font-size: 32px;
+                    margin-bottom: 80px;
+                    text-align: center
+                }
+                ol {
+                    li {
+                        @include text-style-18();
+                        padding: 0 60px;
+                        margin-bottom: 18px;
+                    }
+                }
+            }
+            
+                
+            }
+        }
+    }
+/*--------invest 영역--------*/
+#invest {
+    width: 100%;
+    padding: 80px 0;
+    .inner {
+        width: 1180px;
+        margin: 0 auto;
+        position: relative;
+        &::after {
+            @include clear();
+        }
+        h1 {
+            font-size: 32px;
+            font-weight: 700;
+            text-align: center;
+            color: $dark;
+            margin-bottom: 50px;
+        }
+        .wrap{
+            width: 100%;
+            padding: 0;
+            article {
+                float: left;
+                width: 380px;
+                height: 220px;
+                padding: 25px 0;
+                margin-right: 20px;
+                margin-bottom: 60px;
+                background: $bgColor;
+                &:nth-of-type(3) {
+                    margin-right: 0;
+                }
+                &:nth-of-type(6) {
+                    margin-right: 0;
+                }
+                i {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    @include text-style-24();
+                    color: $blue-dark;
+                    margin-bottom:8px;
+                }
+                h2 {
+                    @include text-style-24();
+                    text-align: center;
+                    font-weight: 400;
+                    color: $primary;
+                    margin-bottom: 12px;
+                }
+                p {
+                    text-align: center;
+                    color: $secondary;
+                }
+            }
+        }
+    }
+}
+/*--------insight 영역--------*/
+#insight {
+    width: 100%;
+    padding: 80px 0;
+
+    .inner {
+        width: 1180px;
+        height: 100vh;
+        margin: 0 auto;
+        position: relative;
+
+        h1{
+            font-size: 32px;
+            font-weight: 700;
+            text-align: center;
+            color: $dark;
+            margin-bottom: 12px
+        }
+        p {
+            @include text-style-18();
+            color: $primary;
+            text-align: center;
+        }
+        #phone {
+            background-image: url(../assets/bgPhone.png);
+            background-repeat: no-repeat;
+            background-position: center;
+            width: 100%;
+            height: 800px;
+            position: absolute;
+            overflow: hidden; //흘러넘치지 않게 
+            ul {
+                position: absolute;
+                top: 175px;
+                left:65px;
+                width: calc(100% * 8);
+                &::after {
+                    @include clear();
+                }
+                li {
+                    position: relative;
+                    left: 323px;
+                    float: left;
+                    width: 255px;
+                    height: auto;
+                    margin-right: 140px;
+                    img {
+                        width: 255px;
+                        height: 450px;
+                    }
+                }
+            }
+        }
+        .prev {
+            position: absolute;
+            left: 0;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+        .next {
+            position: absolute;
+            right: 0;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+    }
+}
+/*--------app 영역--------*/
+.app {
+    width: 100%;
+    height: 500px; //원래 600
+    background: #efefef;
+    .inner {
+        width: 1180px;
+        height: 100%;
+        margin: 0 auto;
+        position: relative;
+        &::after{
+            @include clear();
+        }
+        div {
+            float: left;
+            width: 580px;
+            &:nth-of-type(1) {
+                padding: 140px 0;
+                h2 {
+                    @include text-style-24();
+                    font-weight: 700;
+                    margin-bottom: 12px
+                }
+                p {
+                    @include text-style-16();
+                    width: 600px;
+                    margin-bottom: 32px;
+                }
+                a {
+                    margin-right: 12px;
+                }
+            }
+            &:nth-of-type(2) {
+                position: absolute;
+                top:-10%;
+                right:13%;
+                width: 450px;
+                height: 600px;
+                perspective: 700px;
+                // transform: rotate(-40deg);
+                transform: rotate3d(60,30,30,-50deg);
+                img {
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                }
+            }
+        }
+    }
+}
+/*--------news 영역--------*/
+.news {
+    width: 100%;
+    padding: 100px 0;
+    .inner {
+        width: 1180px;
+        margin: 0 auto;
+        h1 {
+            font-weight: 700;
+            font-size: 32px;
+            text-align: center;
+            color: $dark;
+            margin-bottom: 8px
+        }
+        p {
+            @include text-style-18();
+            text-align: center;
+            color: $primary;
+            margin-bottom: 20px;
+        }
+        .wrap {
+            width: 100%;
+            padding: 0;
+            &::after {
+                @include clear();
+            }
+            article {
+                float: left;
+                width: 380px;
+                height: 500px;
+                position: relative;
+                margin-right: 20px;
+                &:last-of-type {
+                    margin-right: 0;
+                }
+                img {
+                    width: inherit;
+                    height: 300px;
+                    object-fit: cover;
+                    margin-bottom: 20px;
+                }
+                div {
+                    position: absolute;
+                    top: 58%;
+                    left: 10%;
+                    width: 280px;
+                    height: 30px;
+                    background: #efefef;
+                    &::after {
+                        @include clear();
+                    }
+                    span {
+                        @include text-style-12();
+                        float: left;
+                        padding: 6px 22px;
+                        i {
+                            @include text-style-12();
+                        }
+                    }
+                }
+                h3 {
+                    @include text-style-18();
+                    color: $dark;
+                    margin-bottom: 8px;
+                }
+                p {
+                    @include text-style-16();
+                    text-align: left;
+                }
+                a {
+                    @include text-style-16();
+                    display: block;
+                    width: 120px;
+                    height: 35px;
+                    border-radius: 20px;
+                    padding: 4px 14px;
+                    background-color: $blue-dark;
+                    color: $white;
+                    transition: all 0.3s;
+                    &:hover {
+                        background-color: $red;
+                        
+                        
+                    }
+                }
+            }
+        }
+    }
+}
+/*--------subscription 영역--------*/
+.subscription {
+    width: 100%;
+    height: 300px;
+    padding: 70px 0;
+    background-color: $bgColor;
+    .inner {
+        width: 1180px;
+        margin: 0 auto;
+        position: relative;
+        h1 {
+            font-weight: 700;
+            font-size: 32px;
+            text-align: center;
+            color: $dark;
+            margin-bottom: 12px;
+        }
+        p {
+            @include text-style-18();
+            color: $primary;
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        .input-group {
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            input {
+                @include text-style-14();
+                width: 240px;
+                height: 36px;
+                padding: 0 12px;
+                border-radius: 4px;
+                margin-right: 4px;
+                background-color: #f6f8fa;
+                color: #333e47;
+            }
+            button {
+                @include text-style-14();
+                font-weight: 700;
+                height: 36px;
+                padding: 0 12px;
+                border-radius: 4px;
+                color: $white;
+                background-color: $blue;
+            }
+        }
+    }
+}
+/*--------footer 영역--------*/
+#footer {
+    width: 100%;
+    height: 300px;
+    background-color: $bgColor;
+    .inner{
+        width: 1180px;
+        margin: 0 auto;
+        position: relative;
+        padding: 60px 0;
+        h1 {
+            @include text-style-24();
+            font-weight: 700;
+            color: $dark;
+            &::after {
+                content: '';
+                display: block;
+                width: 6px;
+                height: 6px;
+                border-radius: 50%;
+                background: $blue;
+                position: absolute;
+                left: 75px;
+                top: 60px;
+            }
+        }
+        
+        
+        .contact {
+            position: absolute;
+            left: 300px;
+            top: 60px;
+            &::after {
+                @include clear();
+            }
+            div {
+                float: left;
+                width: 200px;
+                h3 {
+                    @include text-style-16();
+                    font-weight: 400;
+                    color: $primary;
+                    margin-bottom: 12px;
+                }
+                address {
+                    font-weight: 700;
+                    font-style: normal;
+                }
+                a {
+                    font-weight: 700;
+                    color: $blue-dark;
+                    &:hover {
+                        border-bottom: 2px solid $blue-dark;
+                    }
+                }
+            }
+        }
+        ul {
+            position: absolute;
+            right: 0;
+            top: 60px;
+            &::after {
+                @include clear();
+            }
+            li {
+                float: left;
+                margin-right: 20px;
+                position: relative;
+                a {
+                    i {
+                        color: $blue-dark;
+                    }
+                    &::after {
+                        content: '';
+                        display: block;
+                        position: absolute;
+                        bottom: -6px;
+                        left: 0;
+                        width: 0;
+                        height: 2px;
+                        background: $blue;
+                        transition: width 0.2s ease-in;
+                    }
+                    &:hover::after  {
+                        width: 100%;
+                    }
+                }
+            }
+        }
+    }
+}
+
+/*----tablet----*/
+// @media screen and(max-width:$tablet) {
+//     #header {
+//         width: 100%;
+//         .inner {
+//             width: 1180px;
+//             height: 120px;
+//             margin: 0 auto;
+//             position: relative;
+//             h1 {
+//                 position: absolute;
+//                 top: 35px;
+//                 left: 0;
+//                 &::after {
+//                     content: '';
+//                     display: block;
+//                     width: 6px;
+//                     height: 6px;
+//                     background: $blue;
+//                     border-radius: 50%;
+//                     position: absolute;
+//                     left: 120px;
+//                     top: 10px;
+//                 }
+//                 a {
+//                     font-weight: 700;
+//                     font-size: 38px;
+//                     color: $dark;
+//                 }
+//             }
+            
+//             .menuWeb {
+//                 display: none;
+//             }
+    
+//             .btnCall {
+                
+//                 display: block;
+                    
+//                 }
+            
+//             .menuMo {
+//                 width: 270px;
+//                 height: 100vh;
+//                 background: $primary;
+//                 position: fixed;
+//                 top: 0;
+//                 left: -270px;
+//                 padding: 35px 30px;
+//                 z-index: 10;
+//                 transition: all 0.5s;
+//                 &.on {
+//                     left: 0;
+//                 }
+//                 h1 {
+//                     padding-bottom: 30px;
+//                     margin-bottom: 20px;
+//                     a {
+//                         display: block;
+//                         @include text-style-24();
+//                         color: $blue-dark;
+//                         text-align: center;
+//                     }
+//                 }
+//                 #gnbMo {
+//                     li {
+//                         a {
+//                             display: block;
+//                             width: 100%;
+//                             padding: 20px 0;
+//                             @include text-style-18();
+//                             color:$white ;
+//                         }
+//                     }
+//                 }
+//             }
+//         }
+//     }
+      
+//     /*--------figure 영역--------*/
+//     #visual {
+//         width: 100%;
+//         height: calc(100vh - 120px);
+//         overflow: hidden;
+//         position: relative;
+//         img {
+//             width: 100%;
+//             margin: 0 auto;
+//         }
+//         .inner {
+//             width: 1180px;
+//             margin: 0 auto;
+//             position: absolute;
+//             top: 30%;
+//             left: 20%;
+//             transform: translateX(-1%);
+//             &::after {
+//                 @include clear();
+//             }
+//            article {
+//                &:nth-of-type(1) {
+//                    float: left;
+//                 h1 {
+//                     font-weight: 700;
+//                     font-size: 60px;
+//                     line-height: 1.2;
+//                     color: $dark;
+//                     margin-bottom: 26px;
+//                     span {
+//                         font-style:italic ;
+//                     }
+//                 }
+//                 p {
+//                     @include text-style-18();
+//                     color: $primary;
+//                     margin-bottom: 50px;
+//                 }
+//                 .btnJoin {
+//                     display: block;
+//                     width: 200px;
+//                     height: 50px;
+//                     background: $green;
+//                     color: $white;
+//                     font-weight: 700;
+//                     @include text-style-16();
+//                     border-radius: 30px;
+//                     display: flex;
+//                     justify-content: center;
+//                     align-items: center;
+//                     box-shadow: 0px 10px 16px 0px #13CE6659;
+//                     transition: all 0.5s;
+//                     &:hover{
+//                         color: $black;
+//                         transform: translateY(-3px);
+//                     }
+//                 }
+//                }
+//                &:nth-of-type(2) {
+//                    float: left;
+//                 .pic {
+//                     width: 400px;
+//                     height: 800px;
+//                     img {
+//                         display: block;
+//                         object-fit: cover;
+//                         width: 100%;
+//                         height: auto;
+//                         position: absolute;
+//                         right: -300px;
+//                         top: -250px;
+//                     }
+//                 }
+//                }
+//            }
+           
+//         }
+    
+//     }
+//     /*--------strategy 영역--------*/
+//     #strategy {
+//         width: 100%;
+//         padding: 180px 0;
+//         .inner {
+//             width: 1180px;
+//             margin: 0 auto;
+//             position: relative;
+//             h1 {
+//                 font-size: 32px;
+//                 font-weight: 700;
+//                 text-align: center;
+//                 color: $black;
+//                 margin-bottom: 80px;
+//             }
+//             .wrap {
+//                 width: 100%;
+//                 padding: 0;
+//                 &::after {
+//                     @include clear();
+//                 }
+//                 article {
+//                     float: left;
+//                     width: 380px;
+//                     height: 480px;
+//                     margin-right: 20px;
+//                     border-radius: 8px;
+//                     box-shadow: 2px 2px 10px rgba(149,199,214,0.5);
+//                     &:last-of-type{ 
+//                         margin-right: 0;
+//                     }
+//                     img {
+//                         display:block;
+//                         width: 160px;
+//                         height: 160px;
+//                         padding-top:40px ;
+//                         margin: 40px auto;
+//                     }
+//                     h2 {
+//                         text-align: center;
+//                         margin-bottom: 18px;
+//                         color: $dark;
+//                         font-weight: 700;
+//                         @include text-style-24();
+//                     }
+//                     p {
+//                         width: 300px;
+//                         margin: 0 auto;
+//                         text-align: center;
+//                         color: $primary;
+//                         @include text-style-16();
+//                     }
+//                 }
+//             }
+//         }
+//     }
+//     /*--------explanation 영역--------*/
+//     #explanation {
+//         width: 100%;
+//         height: 650px;
+//         padding: 90px 0;
+//         background:  $border;
+//         .inner {
+//             width: 1180px;
+//             margin: 0 auto;
+//             &::after {
+//                 @include clear();
+//             }
+//             article {
+//                 float: left;
+//                 width:580px ;
+//                 margin-right: 20px;
+//                 position: relative;
+//                 &:nth-of-type(1){
+//                     img {
+//                         display: block;
+//                         position: absolute;
+//                         width: 100%;
+//                         top: 60px;
+//                         margin-top: 50px
+//                     }
+//                     strong {
+//                         @include text-style-18();
+//                         color: $primary;
+//                     }
+//                     span {
+//                         display: block;
+//                         @include text-style-16();
+//                         margin-bottom: 30px;
+//                     }
+    
+//                 }
+//                 &:last-of-type{
+//                     margin-right: 0;
+//                     h1 {
+//                         font-weight: 700;
+//                         font-size: 32px;
+//                         margin-bottom: 80px;
+//                         text-align: center
+//                     }
+//                     ol {
+//                         li {
+//                             @include text-style-18();
+//                             padding: 0 60px;
+//                             margin-bottom: 18px;
+//                         }
+//                     }
+//                 }
+                
+                    
+//                 }
+//             }
+//         }
+//     /*--------invest 영역--------*/
+//     #invest {
+//         width: 100%;
+//         padding: 80px 0;
+//         .inner {
+//             width: 1180px;
+//             margin: 0 auto;
+//             position: relative;
+//             &::after {
+//                 @include clear();
+//             }
+//             h1 {
+//                 font-size: 32px;
+//                 font-weight: 700;
+//                 text-align: center;
+//                 color: $dark;
+//                 margin-bottom: 50px;
+//             }
+//             .wrap{
+//                 width: 100%;
+//                 padding: 0;
+//                 article {
+//                     float: left;
+//                     width: 380px;
+//                     height: 220px;
+//                     padding: 25px 0;
+//                     margin-right: 20px;
+//                     margin-bottom: 60px;
+//                     background: $bgColor;
+//                     &:nth-of-type(3) {
+//                         margin-right: 0;
+//                     }
+//                     &:nth-of-type(6) {
+//                         margin-right: 0;
+//                     }
+//                     i {
+//                         display: flex;
+//                         justify-content: center;
+//                         align-items: center;
+//                         @include text-style-24();
+//                         color: $blue-dark;
+//                         margin-bottom:8px;
+//                     }
+//                     h2 {
+//                         @include text-style-24();
+//                         text-align: center;
+//                         font-weight: 400;
+//                         color: $primary;
+//                         margin-bottom: 12px;
+//                     }
+//                     p {
+//                         text-align: center;
+//                         color: $secondary;
+//                     }
+//                 }
+//             }
+//         }
+//     }
+//     /*--------insight 영역--------*/
+//     #insight {
+//         width: 100%;
+//         padding: 80px 0;
+    
+//         .inner {
+//             width: 1180px;
+//             height: 100vh;
+//             margin: 0 auto;
+//             position: relative;
+    
+//             h1{
+//                 font-size: 32px;
+//                 font-weight: 700;
+//                 text-align: center;
+//                 color: $dark;
+//                 margin-bottom: 12px
+//             }
+//             p {
+//                 @include text-style-18();
+//                 color: $primary;
+//                 text-align: center;
+//             }
+//             #phone {
+//                 background-image: url(../assets/bgPhone.png);
+//                 background-repeat: no-repeat;
+//                 background-position: center;
+//                 width: 100%;
+//                 height: 800px;
+//                 position: absolute;
+//                 overflow: hidden; //흘러넘치지 않게 
+//                 ul {
+//                     position: absolute;
+//                     top: 175px;
+//                     left:65px;
+//                     width: calc(100% * 8);
+//                     &::after {
+//                         @include clear();
+//                     }
+//                     li {
+//                         position: relative;
+//                         left: 323px;
+//                         float: left;
+//                         width: 255px;
+//                         height: auto;
+//                         margin-right: 140px;
+//                         img {
+//                             width: 255px;
+//                             height: 450px;
+//                         }
+//                     }
+//                 }
+//             }
+//             .prev {
+//                 position: absolute;
+//                 left: 0;
+//                 top: 50%;
+//                 transform: translateY(-50%);
+//             }
+//             .next {
+//                 position: absolute;
+//                 right: 0;
+//                 top: 50%;
+//                 transform: translateY(-50%);
+//             }
+//         }
+//     }
+//     /*--------app 영역--------*/
+//     .app {
+//         width: 100%;
+//         height: 500px; //원래 600
+//         background: #efefef;
+//         .inner {
+//             width: 1180px;
+//             height: 100%;
+//             margin: 0 auto;
+//             position: relative;
+//             &::after{
+//                 @include clear();
+//             }
+//             div {
+//                 float: left;
+//                 width: 580px;
+//                 &:nth-of-type(1) {
+//                     padding: 140px 0;
+//                     h2 {
+//                         @include text-style-24();
+//                         font-weight: 700;
+//                         margin-bottom: 12px
+//                     }
+//                     p {
+//                         @include text-style-16();
+//                         width: 600px;
+//                         margin-bottom: 32px;
+//                     }
+//                     a {
+//                         margin-right: 12px;
+//                     }
+//                 }
+//                 &:nth-of-type(2) {
+//                     position: absolute;
+//                     top:-10%;
+//                     right:13%;
+//                     width: 450px;
+//                     height: 600px;
+//                     perspective: 700px;
+//                     // transform: rotate(-40deg);
+//                     transform: rotate3d(60,30,30,-50deg);
+//                     img {
+//                         width: 100%;
+//                         height: 100%;
+//                         object-fit: cover;
+//                     }
+//                 }
+//             }
+//         }
+//     }
+//     /*--------news 영역--------*/
+//     .news {
+//         width: 100%;
+//         padding: 100px 0;
+//         .inner {
+//             width: 1180px;
+//             margin: 0 auto;
+//             h1 {
+//                 font-weight: 700;
+//                 font-size: 32px;
+//                 text-align: center;
+//                 color: $dark;
+//                 margin-bottom: 8px
+//             }
+//             p {
+//                 @include text-style-18();
+//                 text-align: center;
+//                 color: $primary;
+//                 margin-bottom: 20px;
+//             }
+//             .wrap {
+//                 width: 100%;
+//                 padding: 0;
+//                 &::after {
+//                     @include clear();
+//                 }
+//                 article {
+//                     float: left;
+//                     width: 380px;
+//                     height: 500px;
+//                     position: relative;
+//                     margin-right: 20px;
+//                     &:last-of-type {
+//                         margin-right: 0;
+//                     }
+//                     img {
+//                         width: inherit;
+//                         height: 300px;
+//                         object-fit: cover;
+//                         margin-bottom: 20px;
+//                     }
+//                     div {
+//                         position: absolute;
+//                         top: 58%;
+//                         left: 10%;
+//                         width: 280px;
+//                         height: 30px;
+//                         background: #efefef;
+//                         &::after {
+//                             @include clear();
+//                         }
+//                         span {
+//                             @include text-style-12();
+//                             float: left;
+//                             padding: 6px 22px;
+//                             i {
+//                                 @include text-style-12();
+//                             }
+//                         }
+//                     }
+//                     h3 {
+//                         @include text-style-18();
+//                         color: $dark;
+//                         margin-bottom: 8px;
+//                     }
+//                     p {
+//                         @include text-style-16();
+//                         text-align: left;
+//                     }
+//                     a {
+//                         @include text-style-16();
+//                         display: block;
+//                         width: 120px;
+//                         height: 35px;
+//                         border-radius: 20px;
+//                         padding: 4px 14px;
+//                         background-color: $blue-dark;
+//                         color: $white;
+//                         transition: all 0.3s;
+//                         &:hover {
+//                             background-color: $red;
+                            
+                            
+//                         }
+//                     }
+//                 }
+//             }
+//         }
+//     }
+//     /*--------subscription 영역--------*/
+//     .subscription {
+//         width: 100%;
+//         height: 300px;
+//         padding: 70px 0;
+//         background-color: $bgColor;
+//         .inner {
+//             width: 1180px;
+//             margin: 0 auto;
+//             position: relative;
+//             h1 {
+//                 font-weight: 700;
+//                 font-size: 32px;
+//                 text-align: center;
+//                 color: $dark;
+//                 margin-bottom: 12px;
+//             }
+//             p {
+//                 @include text-style-18();
+//                 color: $primary;
+//                 text-align: center;
+//                 margin-bottom: 30px;
+//             }
+//             .input-group {
+//                 position: absolute;
+//                 left: 50%;
+//                 transform: translateX(-50%);
+//                 input {
+//                     @include text-style-14();
+//                     width: 240px;
+//                     height: 36px;
+//                     padding: 0 12px;
+//                     border-radius: 4px;
+//                     margin-right: 4px;
+//                     background-color: #f6f8fa;
+//                     color: #333e47;
+//                 }
+//                 button {
+//                     @include text-style-14();
+//                     font-weight: 700;
+//                     height: 36px;
+//                     padding: 0 12px;
+//                     border-radius: 4px;
+//                     color: $white;
+//                     background-color: $blue;
+//                 }
+//             }
+//         }
+//     }
+//     /*--------footer 영역--------*/
+//     #footer {
+//         width: 100%;
+//         height: 300px;
+//         background-color: $bgColor;
+//         .inner{
+//             width: 1180px;
+//             margin: 0 auto;
+//             position: relative;
+//             padding: 60px 0;
+//             h1 {
+//                 @include text-style-24();
+//                 font-weight: 700;
+//                 color: $dark;
+//                 &::after {
+//                     content: '';
+//                     display: block;
+//                     width: 6px;
+//                     height: 6px;
+//                     border-radius: 50%;
+//                     background: $blue;
+//                     position: absolute;
+//                     left: 75px;
+//                     top: 60px;
+//                 }
+//             }
+            
+            
+//             .contact {
+//                 position: absolute;
+//                 left: 300px;
+//                 top: 60px;
+//                 &::after {
+//                     @include clear();
+//                 }
+//                 div {
+//                     float: left;
+//                     width: 200px;
+//                     h3 {
+//                         @include text-style-16();
+//                         font-weight: 400;
+//                         color: $primary;
+//                         margin-bottom: 12px;
+//                     }
+//                     address {
+//                         font-weight: 700;
+//                         font-style: normal;
+//                     }
+//                     a {
+//                         font-weight: 700;
+//                         color: $blue-dark;
+//                         &:hover {
+//                             border-bottom: 2px solid $blue-dark;
+//                         }
+//                     }
+//                 }
+//             }
+//             ul {
+//                 position: absolute;
+//                 right: 0;
+//                 top: 60px;
+//                 &::after {
+//                     @include clear();
+//                 }
+//                 li {
+//                     float: left;
+//                     margin-right: 20px;
+//                     position: relative;
+//                     a {
+//                         i {
+//                             color: $blue-dark;
+//                         }
+//                         &::after {
+//                             content: '';
+//                             display: block;
+//                             position: absolute;
+//                             bottom: -6px;
+//                             left: 0;
+//                             width: 0;
+//                             height: 2px;
+//                             background: $blue;
+//                             transition: width 0.2s ease-in;
+//                         }
+//                         &:hover::after  {
+//                             width: 100%;
+//                         }
+//                     }
+//                 }
+//             }
+//         }
+//     }
+// }

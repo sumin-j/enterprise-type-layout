@@ -1,0 +1,77 @@
+#qna {
+    width: 100%;
+    padding: 120px 0;
+    position: relative;
+    overflow: hidden;
+    .inner {
+        width: 1180px;
+        margin: 0 auto;
+        h1 {
+            font-weight: 700;
+            font-size: 48px;
+            color: $dark;
+            margin-bottom: 80px;
+        }
+        .row {
+            position: relative;
+            &::after {
+                @include clear();
+            }
+            span{
+                @include text-style-16();                
+                display: block;
+                float: left;
+                width: 580px;
+                bottom: 0;
+                padding-top: 40px;
+            }
+            p {
+                @include text-style-24();
+                float: left;
+                width: 580px;
+                font-weight: 700;
+            }
+        }
+    }   
+}
+
+.contents {
+    width: 100%;
+    padding: 20px 0;
+    dl {
+        width: 1180px;
+        margin: 0 auto;
+        position: relative;
+        dt {
+            @include text-style-24();
+            color: $dark;
+            font-weight: 700;
+            padding: 20px;
+            margin-bottom: 12px;
+            background: $bgColor;
+            border-radius: 4px;
+            cursor: pointer;
+            i {
+                position: absolute;
+                right: 70px;
+            }
+            &.on{
+                color: $blue-dark;
+            }
+            
+            
+        }
+        dd {
+            @include text-style-18();
+            color: $primary;
+            width: 900px;
+            padding: 20px;
+            margin-bottom: 20px;
+            display: none;
+            &.on {
+                display: block;
+            }
+        }
+
+    }
+}

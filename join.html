@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>기업형 레이아웃</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <script src="https://kit.fontawesome.com/b24d8c8339.js" crossorigin="anonymous"></script>
+    <script defer src="./join.js"></script>
+</head>
+<body>
+    <!-- header 영역 -->
+    <header id="header">
+        <div class="inner">
+            <h1><a href="index.html">ICLUB</a></h1>
+
+            <nav>
+                <ul id="gnb">
+                    <li><a href="department.html" data-content="Department">Department</a></li>
+                    <li><a href="youtube.html" data-content="Youtube">Youtube</a></li>
+                    <li><a href="community.html" data-content="Community">Community</a></li>
+                    <li><a href="portfolio.html" data-content="Portfolio">Portfolio</a></li>
+                    <li><a href="location.html" data-content="Location">Location</a></li>
+                </ul>
+
+                <ul class="util">
+                    <li><a href="#">Notice</a></li>
+                    <li><a href="#">Contact</a></li>
+                    <li><a href="join.html">Login</a></li>
+                    <li><a href="#">Sitemap</a></li>
+                </ul>
+            </nav>
+
+
+        </div>
+    </header>
+    <!-- content 영역 -->
+    <section id="join">
+        <div class="inner">
+            <h1>Join</h1>
+            <div class="row">
+                <span>ICLUB team</span>
+                <p>
+                    We put our passion and our expertise at the service of your finance and next strong brands. Join us!
+                </p>
+            </div>
+        </div>
+    </section>
+
+
+
+    <form action="#" method="get" id="joinus">
+        <fieldset>
+            <div class="terms">
+                <legend class="hidden">join  form</legend>
+                <h2><label for="terms">Terms &amp; Policy</label></h2>
+                <textarea name="terms" id="terms" cols="50" rows="10">
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Inventore quam dignissimos eos, est porro unde quae perspiciatis assumenda aliquid maiores repudiandae ipsa praesentium quidem. Maxime odit exercitationem ducimus rem tenetur, explicabo quae pariatur optio quos voluptatem possimus dolorem debitis at iure voluptates quisquam suscipit harum repellat commodi numquam cumque. Laboriosam nam eveniet exercitationem quasi porro, aspernatur culpa debitis asperiores quae.
+                </textarea>
+                <div class="agree">
+                    <input type="checkbox" name="agree" id="agree">
+                    <label for="agree">I agree to the terms and policy</label>
+                </div>
+            </div>
+            <div class="input-group">
+                <table>
+                    <caption class="hidden">join input form</caption>
+                    <tr>
+                        <th scope="row"><label for="name">Full Name</label></th>
+                        <td>
+                            <input type="text" placeholder="Full Name" id="name">
+                        </td>
+                    </tr>
+                    <tr>
+                        <th scope="row"><label for="location">Choose<br/> Location</label></th>
+                        <td>
+                            <select name="location" id="location">
+                                <option value="select" name="location">----SELECT----</option>
+                                <option value="london" name="location">London</option>
+                                <option value="dubai" name="location">Dubai</option>
+                                <option value="monaco" name="location">Monaco</option>
+                                <option value="kyiv" name="location">Kyiv</option>
+                                <option value="almaty" name="location">Almaty</option>
+                                <option value="minsk" name="location">Minsk</option>
+                                <option value="cyprus" name="location">Cyprus</option>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th scope="row"><label for="email">Email</label></th>
+                        <td>
+                            <input type="email" placeholder="Email" id="email">
+                        </td>
+                    </tr>
+                    <tr>
+                        <th scope="row"><label for="phone">Phone</label></th>
+                        <td>
+                            <input type="tel" placeholder="Phone" id="phone">
+                        </td>
+                    </tr>
+                    <tr>
+                        <th scope="row"><label for="comment">How did you find out about us?</label></th>
+                        <td>
+                            <textarea name="comment" id="comment" cols="30" rows="10" placeholder="How did you find out about us?"></textarea>
+                        </td>
+                    </tr>
+
+                    
+                </table>
+                <button type="submit">
+                    Join ICLUB
+                </button>
+            </div>
+        </fieldset>
+    </form>
+
+   
+
+
+
+    <!-- footer 영역 -->
+    <footer id="footer">
+    <div class="inner">
+        <h1>ICLUB</h1>
+        <div class="contact">
+            <div>
+                <h3>HEAD OFFICE</h3>
+                <address>32&#47;2 Moskovska St., 01010,Kyjv,Ukraine</address>
+            </div>
+            <div>
+                <h3>EMAIL FOR PRESS</h3>
+                <a href="mailto:press@iclub.vc">press@iclub.vc</a>
+            </div>
+        </div>
+        <ul>
+            <li>
+                <a href="#">
+                    <i class="fab fa-linkedin"></i>
+                    Linkedin
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <i class="fab fa-facebook"></i>
+                    Facebook
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <i class="fab fa-instagram"></i>
+                    Instagram
+                </a>
+            </li>
+        </ul>
+    </div> 
+    </footer>
+
+</body>
+</html>
+

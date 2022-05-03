@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>기업형 레이아웃</title>
+    <script src="https://unpkg.com/isotope-layout@3/dist/isotope.pkgd.min.js"></script>
+
+    <link rel="stylesheet" href="./css/style.css">
+    <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=8f389a4aa08aabbe4b7e5c89c3a0f984"></script>
+    <script src="https://kit.fontawesome.com/b24d8c8339.js" crossorigin="anonymous"></script>
+    <script defer src="./portfolio.js"></script>
+</head>
+<body>
+    <!-- header 영역 -->
+    <header id="header">
+        <div class="inner">
+            <h1><a href="index.html">ICLUB</a></h1>
+
+            <nav>
+                <ul id="gnb">
+                    <li><a href="department.html" data-content="Department">Department</a></li>
+                    <li><a href="youtube.html" data-content="Youtube">Youtube</a></li>
+                    <li><a href="community.html" data-content="Community">Community</a></li>
+                    <li><a href="portfolio.html" data-content="Portfolio">Portfolio</a></li>
+                    <li><a href="location.html" data-content="Location">Location</a></li>
+                </ul>
+
+                <ul class="util">
+                    <li><a href="#">Notice</a></li>
+                    <li><a href="#">Contact</a></li>
+                    <li><a href="join.html">Login</a></li>
+                    <li><a href="#">Sitemap</a></li>
+                </ul>
+            </nav>
+
+
+        </div>
+    </header>
+    <!-- content 영역 -->
+    <section id="portfolio">
+        <div class="inner">
+            <h1>Portfolio</h1>
+            <div class="row">
+                <span>ICLUB team</span>
+                <p>
+                    Since 2018 ICLUB members invested in startups presented by TA Ventures. Each year we present to ICLUB members 20-30 new start-ups with TA Ventures.                </p>
+            </div>
+        </div>
+    </section>
+
+    <article id="searchBox">
+        <input type="text" id="search" placeholder="Please enter your search term">
+        <button class="btnSearch">Search</button>
+    </article>
+
+    <div class="wrap">
+        <img src="./assets/loading.gif" alt="loading" class="loading">
+        <ul id="list">
+
+
+        </ul>
+    </div>
+
+    
+    
+
+   
+
+    <!-- footer 영역 -->
+    <footer id="footer">
+    <div class="inner">
+        <h1>ICLUB</h1>
+        <div class="contact">
+            <div>
+                <h3>HEAD OFFICE</h3>
+                <address>32&#47;2 Moskovska St., 01010,Kyjv,Ukraine</address>
+            </div>
+            <div>
+                <h3>EMAIL FOR PRESS</h3>
+                <a href="mailto:press@iclub.vc">press@iclub.vc</a>
+            </div>
+        </div>
+        <ul>
+            <li>
+                <a href="#">
+                    <i class="fab fa-linkedin"></i>
+                    Linkedin
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <i class="fab fa-facebook"></i>
+                    Facebook
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <i class="fab fa-instagram"></i>
+                    Instagram
+                </a>
+            </li>
+        </ul>
+    </div> 
+    </footer>
+
+</body>
+</html>
+
